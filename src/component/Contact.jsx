@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+
+
+
+
 gsap.registerPlugin(ScrollTrigger)
-
-
 const Contact = () => { 
 const useAnimeRef=useRef([])
 const imageRef=useRef([])
@@ -125,11 +127,11 @@ gsap.set(imageRef.current[2],{
 </div>
 
 <div ref={(el)=>(imageRef.current[1])=el} className='absolute size-80 -translate-y-[115px]   border  left-20  '>
-    <img src={`/public/img/contact-1.webp`} alt="" className=' object-center object-cover size-full' />
+    <img src={`img/contact-1.webp`} alt="" className=' object-center object-cover size-full' />
 </div>
 
 <div ref={(el)=>(imageRef.current[2])=el} className='absolute h-36 w-80 translate-y-[203px]   border  left-32 '>
-    <img src={`/public/img/contact-2.webp`} alt="" className=' translate-y-6  scale-[1.3]  object-cover size-full' />
+    <img src={`img/contact-2.webp`} alt="" className=' translate-y-6  scale-[1.3]  object-cover size-full' />
 </div>
 
         </div>

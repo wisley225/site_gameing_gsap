@@ -3,6 +3,7 @@ import React from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useState,useEffect, useRef } from 'react';
+import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -68,11 +69,6 @@ return ()=>ctx.revert();
 useEffect(()=>{
 
 
-
-
-
-
-
 const ctx=gsap.context(()=>{  
 
 gsap.set( useAnimeRef.current, {
@@ -104,12 +100,6 @@ gsap.from( textref.current,{
 
 })
 
-
-
-
-
-
-
 return ()=>ctx.revert()
 
 
@@ -119,7 +109,7 @@ return ()=>ctx.revert()
 
 
 
-const handleTextAnim =()=>{
+const handleTextEnter =()=>{
 
     if (splitUseRef.current) {
  console.log(splitUseRef.current)
@@ -127,8 +117,30 @@ const handleTextAnim =()=>{
 
 
         let ctx=gsap.context(()=>{
-        gsap.set(splitText.chars,{y:115 })
-        gsap.to(splitText.chars,{stagger:0.05, y:0, duration:0.5})
+
+
+   gsap.set(splitUseRef.current,{
+    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+    lineHeight:2,
+   
+
+   })
+
+gsap.set(splitText.chars,{
+y:0,
+opacity:1
+
+})
+
+ gsap.from(
+            splitText.chars,{
+                y:15,
+                stagger:0.01,
+                 duration:0.2,
+                 opacity:0
+                
+                
+                })
         
         })
         
@@ -150,7 +162,48 @@ const handleTextAnim =()=>{
 
 }
 
+const handleTextLeave =()=>{
 
+    if (splitUseRef.current) {
+const splitText=new SplitType( splitUseRef.current, {type: "chars"});
+ let ctx=gsap.context(()=>{
+
+
+gsap.set(splitText.chars,{
+
+opacity:1
+
+})
+
+ gsap.from(
+            splitText.chars,{
+                y:-15,
+                stagger:0.01,
+                 duration:0.2,
+                 opacity:0
+                
+                
+                })
+        
+        })
+        
+        return ()=>ctx.revert();
+
+
+
+
+    
+    }
+
+
+
+
+  
+
+
+
+
+}
 
     return (
         <div className=' mt-60'>
@@ -177,8 +230,16 @@ const handleTextAnim =()=>{
             boundeless piullar . Discover its
          secrets and shape your fate amidst infinite opportunities.
          </p>
-         <button ref={ splitUseRef}  onClick={()=>handleTextAnim()} 
-         className='border cursor-pointer  text-black  bg-white  text-[10px]  py-2 px-6  rounded-full uppercase  '> discover prologue </button>
+
+         
+         <button ref={ splitUseRef} 
+          onMouseEnter={()=>handleTextEnter() } 
+          onMouseLeave={()=>handleTextLeave()}
+
+
+         className='border cursor-pointer  text-black  bg-white  text-[10px]  py-2 px-6  rounded-full uppercase  '> 
+         discover prologue
+ </button>
          
        </div>
       

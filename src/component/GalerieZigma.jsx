@@ -5,7 +5,6 @@ import { TiLocationArrow } from 'react-icons/ti';
 
 
 const GalerieZigma = ({ title ,description ,video , containerClass, containerClassVideo   }) => {
-const image =''
 
 const containerRef=useRef(null);
 const videoRef=useRef([]);
@@ -14,8 +13,6 @@ const [hoveropacity,setHoverOpacity]=useState('');
 const hoverButtonRef=useRef(null);
 
  const handleMouseMove=(event)=>{
-
-
 if (containerRef.current) {
 
 
@@ -34,9 +31,6 @@ if (containerRef.current) {
 
     const tiltX=(mouseX - 0.5)*40;
     const tiltY=(mouseY - 0.5)*-40; 
-
-
-
 
 
 const ctx=gsap.context(()=>{
