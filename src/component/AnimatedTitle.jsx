@@ -55,3 +55,8 @@ if (containerRef.current) {
  
  export default AnimatedTitle;
  
+
+
+//  git remote add origin https://github.com/wisley225/site_gameing_gsap.git
+// git branch -M main
+// git push -u origin main
