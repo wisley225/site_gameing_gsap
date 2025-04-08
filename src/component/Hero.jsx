@@ -134,7 +134,7 @@ const Hero = () => {
           G<b>A</b>MING
         </h1>
 
-        <div className="absolute left-0 top-0 z-30 inline-block">
+        <div className=" absolute  top-20 z-30 inline-block">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="text-blue-100 text-9xl max-md:text-5xl  font-extrabold ">
               redifi<b>n</b>e

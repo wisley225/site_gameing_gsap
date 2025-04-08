@@ -1,11 +1,9 @@
 
 import React from 'react';
-import { TfiLocationArrow } from 'react-icons/tfi';
 import { TiLocationArrow } from 'react-icons/ti';
-import Lottie from 'lottie-react';
 import { FaMusic } from 'react-icons/fa';
-import { useRef ,useEffect,useState} from 'react';
-import gsap from 'gsap';
+import { useRef ,useState} from 'react';
+
 import './navbar.css';
 import ButtonAnim from './ButtonAnim';
 
@@ -34,13 +32,14 @@ if (audioRef.current) {
 
 
     return (
-        <div  className='  backdrop-brightness-50 rounded-xl fixed left-24 mt-10 z-50 w-10/12   h-20  flex justify-between   text-blue-50' >
-           <div className=' flex  items-center w-1/2'>
-            <div className=' size-10  mx-9'> <img src={`img/logo.png`} alt="" className=' object-center object-cover size-full' /></div>
-            <ButtonAnim text='products' containerClass=' bg-white  flex justify-center items-center px-4 py-1  rounded-full  text-black ' icon={<TiLocationArrow  />} />
+        <div  className='max-[563px]:left-1  max-[1015px]:w-7/12 max-[995px]:w-[550px] max-[689px]:w-[400px] max-[689px]:left-36  backdrop-brightness-50 rounded-xl fixed left-24 mt-10 z-50 w-10/12   py-5 max-[717px]:flex-col   max-[717px]:items-center  flex justify-between   text-blue-50' >
+           <div className='   flex justify-center max-[689px]:w-full  items-center w-1/2'>
+            <div className=' size-10   mx-9  '> 
+                <img src={`img/logo.png`} alt="" className=' object-center object-cover size-full' /></div>
+            <ButtonAnim text='products' containerClass=' bg-white  flex justify-center items-center px-4 py-1 max-[1015px]:w-40 rounded-full  text-black  ' icon={<TiLocationArrow  />} />
            </div>
 
-     <ul  className=' flex w-4/12 justify-evenly  items-center text-sm '>
+     <ul  className='  flex  justify-evenly  items-center text-sm '>
            
             <li 
                  className='menu   cursor-pointer '>nexus  </li>

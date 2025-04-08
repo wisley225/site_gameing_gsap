@@ -113,10 +113,10 @@ return ()=>ctx.revert()
 
 
     return (
-        <div className=' mt-60'>
+        <div className=' mt-60  m-auto '>
         <h1 className=' mb-5 uppercase text-white text-sm text-center'> the Multiversal ip world</h1>    
-        <p ref={(el)=>(textref.current[0]=el)} className=' uppercase font-extrabold text-7xl text-white text-center'>the story of </p>
-        <p ref={(el)=>(textref.current[1]=el)} className='   bg-clip-text mix-blend-difference relative z-10   uppercase font-extrabold text-7xl text-white text-center'>a hidden realm </p>
+        <p ref={(el)=>(textref.current[0]=el)} className=' max-[495px]:text-4xl uppercase font-extrabold text-7xl text-white text-center'>the story of </p>
+        <p ref={(el)=>(textref.current[1]=el)} className=' max-[495px]:text-4xl   bg-clip-text mix-blend-difference relative z-10   uppercase font-extrabold text-7xl text-white text-center'>a hidden realm </p>
     
        <div 
        onMouseMove={handleMouseMove}
@@ -129,7 +129,7 @@ return ()=>ctx.revert()
        </div>
 
 
-       <div className=' ml-auto text-white w-5/12 '>
+       <div className=' max-[495px]:w-full ml-auto text-white w-5/12 '>
          <p className=' mb-5 '>
              where realms converge , lies Zentry and the 
             boundeless piullar . Discover its
@@ -137,7 +137,7 @@ return ()=>ctx.revert()
          </p>
 
          
-  <ButtonAnim text='discover prologue'  containerClass= ' cursor-pointer  text-black  bg-white  text-[10px]  py-2 px-6  rounded-full uppercase  ' />
+  <ButtonAnim text='discover prologue'  containerClass= 'max-[495px]:w-44  cursor-pointer  text-black  bg-white  text-[10px]  py-2 px-6  rounded-full uppercase  ' />
          
        </div>
       

@@ -17,7 +17,7 @@ function App() {
 
 
 
-<div className=' bg-gray-300'>
+<div className=' bg-gray-300 overflow-x-hidden'>
 <Navbar/>
 <Hero/>
 <About/>

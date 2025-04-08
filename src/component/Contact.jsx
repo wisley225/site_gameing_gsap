@@ -12,6 +12,8 @@ const Contact = () => {
 const useAnimeRef=useRef([])
 const imageRef=useRef([])
 
+
+
 useEffect(()=>{
 
     const ctx= gsap.context(()=>{
@@ -109,8 +111,8 @@ gsap.set(imageRef.current[2],{
     return (
         <div className='    bg-black my-20 mx-5 rounded-xl h-[550px] flex justify-center items-center'>
             
-<div  className=' relative z-10 text-center text-white text-6xl font-extrabold  uppercase'>
-<p className='  text-center text-sm'>Join Zentry</p>
+<div  className=' relative z-10 text-center text-white text-6xl max-[854px]:text-3xl max-[450px]:text-xl font-extrabold  uppercase'>
+<p className='  text-center text-sm  '>Join Zentry</p>
 
 <p ref={(el)=>(useAnimeRef.current[0])=el}>let's build the  </p>
 <p ref={(el)=>(useAnimeRef.current[1])=el}>new era of</p>
@@ -122,16 +124,16 @@ gsap.set(imageRef.current[2],{
 </div>
 
 
-<div ref={(el)=>(imageRef.current[0])=el} className=' h-[500px]  absolute right-10 '>
+<div ref={(el)=>(imageRef.current[0])=el} className=' h-[500px]  absolute right-10  '>
     <img src={`img/swordman.webp`} alt="" className=' object-cover object-center size-full' />
 </div>
 
-<div ref={(el)=>(imageRef.current[1])=el} className='absolute size-80 -translate-y-[115px]   border  left-20  '>
+<div ref={(el)=>(imageRef.current[1])=el} className='absolute size-80 -translate-y-[115px]   border  left-20 max-[450px]:hidden'>
     <img src={`img/contact-1.webp`} alt="" className=' object-center object-cover size-full' />
 </div>
 
 <div ref={(el)=>(imageRef.current[2])=el} className='absolute h-36 w-80 translate-y-[203px]   border  left-32 '>
-    <img src={`img/contact-2.webp`} alt="" className=' translate-y-6  scale-[1.3]  object-cover size-full' />
+    <img src={`img/contact-2.webp`} alt="" className=' translate-y-6  scale-[1.3]  object-cover size-full max-[854px]:hidden' />
 </div>
 
         </div>

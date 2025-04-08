@@ -38,7 +38,7 @@ if (useVideo.current) {
 
 
   return (
-    <div className=' bg-black p-20 text-xl border'>
+    <div className=' bg-black p-20 text-xl border '>
       <div className='  w-96 max-sm:w-60  font-circular-web pt-20 pb-28'>
         <p className='text-white '>
           Into the Metagame Layer</p>
@@ -51,13 +51,13 @@ if (useVideo.current) {
       </div>
 
 
-      <div className='   grid grid-cols-1 gap-5  ' >
+      <div className=' border  grid grid-cols-1 gap-5 m-auto ' >
 
         <GalerieZigma title='radiant'
           description='A cross-platform metagame app, turning your activities
 across Web2 and Web3 games into a rewarding adventure.'
           video='videos/feature-1.mp4'
-          containerClass="border-gray-600 h-96 max-[441px]:w-72 m-auto w-full   rounded-lg border border-gray-400" 
+          containerClass="border-gray-600 h-96 m-auto w-full   rounded-lg border border-gray-400" 
           containerClassVideo='rounded-lg  size-full object-center object-cover'
           />
 
@@ -92,9 +92,7 @@ across Web2 and Web3 games into a rewarding adventure.'
  containerClass='border border-gray-600 rounded-lg h-[250px] '
  video='videos/feature-4.mp4'
  containerClassVideo=' rounded-lg size-full  object-cover'
-
-   
- />
+/>
 
 
 
@@ -103,10 +101,10 @@ across Web2 and Web3 games into a rewarding adventure.'
 </div>
 
 
-<div className=' flex h-64   gap-5 justify-between'>
+<div className=' flex h-64 max-[639px]:flex-wrap    gap-5 justify-between'>
 
-<div className=' border rounded-lg border-gray-600 w-1/2 bg-violet-300 pt-10 pl-10 text-5xl max-[689px]:text-3gitxl font-extrabold uppercase'> <p>More</p> <p>coming</p> <p>soon.</p></div>
-<div className=' border rounded-lg border-gray-600 w-1/2 '>
+<div className=' max-[639px]:w-full border rounded-lg border-gray-600 w-1/2 bg-violet-300 pt-10 pl-10 text-5xl max-[689px]:text-3xl font-extrabold uppercase'> <p>More</p> <p>coming</p> <p>soon.</p></div>
+<div className=' max-[639px]:w-full border rounded-lg border-gray-600 w-1/2 '>
  <video  ref={useVideo} className=' size-full rounded-lg object-cover object-center' 
  src={`videos/feature-5.mp4`} autoPlay loop ></video></div>
 
