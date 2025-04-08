@@ -5,9 +5,7 @@ import About from './About'
 import Galerie from './Galerie'
 import Contact from './Contact'
 import Navbar from './Navbar'
-import Chargement from './Chargement'
-import { Suspense,lazy } from 'react'
-const loading=lazy(()=>import('./Chargement'))
+
 
 function App() {
 
@@ -16,7 +14,7 @@ function App() {
   return (
     <>
 
-<Suspense fallback={ <Chargement/>}>
+
 
 <div className=' bg-gray-300'>
 <Navbar/>
@@ -25,7 +23,7 @@ function App() {
 <Galerie/>
 <Contact/>
 </div>
-</Suspense>
+
 
 
 
