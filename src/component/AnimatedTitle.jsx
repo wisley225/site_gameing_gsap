@@ -45,7 +45,7 @@ if (containerRef.current) {
 
 
     return (
-       <div ref={containerRef} className= '   font-extrabold    mt-5 text-center text-7xl  uppercase leading-[0.8] md:text-[6rem'>
+       <div ref={containerRef} className= '   font-extrabold    mt-5 text-center text-7xl max-lg:text-3xl max-md:text-xl uppercase leading-[0.8] '>
 <p ref={(el)=>(animatedRef.current[0]=el)} >Discover the world's </p>
    <p ref={(el)=>(animatedRef.current[1]=el)}>largest shared adventure</p> 
 

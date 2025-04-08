@@ -97,11 +97,11 @@ className= {containerClass}  >
 
 
   <div className=' text-white absolute   flex flex-col  justify-between   h-full p-5   '>
-<div className=' w-3/6 relative z-10 '>
-<h1 className='text-5xl font-extrabold uppercase text-gray-400 mb-2'> { title} </h1> 
+<div className=' w-3/6 relative z-10  max-[847px]:w-full'>
+<h1 className='text-5xl font-extrabold uppercase text-gray-400 mb-2 max-sm:text-xl'> { title} </h1> 
 
 
-<p className='text-gray-400 text-sm font-semibold '>{description}</p>
+<p className='text-gray-400 text-sm   font-semibold '>{description}</p>
 </div>
 
 

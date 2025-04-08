@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import ButtonAnim from './ButtonAnim';
 
 
 
@@ -115,9 +116,8 @@ gsap.set(imageRef.current[2],{
 <p ref={(el)=>(useAnimeRef.current[1])=el}>new era of</p>
 <p ref={(el)=>(useAnimeRef.current[2])=el}>gaming together</p>
 
+<ButtonAnim text='contact us'  containerClass='border cursor-pointer    text-black font-zentry bg-white  text-sm mt-5  py-4 px-6  rounded-full uppercase '/>
 
-<button 
-         className='border cursor-pointer    text-black font-zentry bg-white  text-sm mt-5  py-4 px-6  rounded-full uppercase  '> contact us </button>
          
 </div>
 

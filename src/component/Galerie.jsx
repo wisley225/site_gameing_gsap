@@ -39,7 +39,7 @@ if (useVideo.current) {
 
   return (
     <div className=' bg-black p-20 text-xl border'>
-      <div className=' w-4/12  font-circular-web pt-20 pb-28'>
+      <div className='  w-96 max-sm:w-60  font-circular-web pt-20 pb-28'>
         <p className='text-white '>
           Into the Metagame Layer</p>
         <p className='text-gray-400'>
@@ -51,30 +51,30 @@ if (useVideo.current) {
       </div>
 
 
-      <div className='   grid grid-cols-1 gap-5 ' >
+      <div className='   grid grid-cols-1 gap-5  ' >
 
         <GalerieZigma title='radiant'
           description='A cross-platform metagame app, turning your activities
 across Web2 and Web3 games into a rewarding adventure.'
           video='videos/feature-1.mp4'
-          containerClass="border-gray-600 h-96   rounded-lg border border-gray-400" 
+          containerClass="border-gray-600 h-96 max-[441px]:w-72 m-auto w-full   rounded-lg border border-gray-400" 
           containerClassVideo='rounded-lg  size-full object-center object-cover'
           />
 
       
 
    
-<div className=' flex  gap-5  '>
+<div className=' flex max-[637px]:flex-wrap    gap-5  '>
 
   <GalerieZigma
    title='zigma'
    description='An anime and gaming-inspired NFT collection - the IP primed for expansion.'
   video='videos/feature-2.mp4'
-  containerClass=' w-1/2 '
+  containerClass=' w-1/2 max-[637px]:w-full '
   containerClassVideo=' border border-gray-600   rounded-lg h-[520px] w-full object-cover object-center'
  />
 
- <div className='rounded-lg w-1/2   flex flex-col flex-wrap  gap-5   size-full '>
+ <div className='rounded-lg w-1/2  max-[637px]:w-full  flex  flex-col   gap-5   size-full '>
  <GalerieZigma
  title='nexus'
  description='A gamified social hub, adding a new dimension of play to social interaction for Web3 communities.'
@@ -105,7 +105,7 @@ across Web2 and Web3 games into a rewarding adventure.'
 
 <div className=' flex h-64   gap-5 justify-between'>
 
-<div className=' border rounded-lg border-gray-600 w-1/2 bg-violet-300 pt-10 pl-10 text-5xl font-extrabold uppercase'> <p>More</p> <p>coming</p> <p>soon.</p></div>
+<div className=' border rounded-lg border-gray-600 w-1/2 bg-violet-300 pt-10 pl-10 text-5xl max-[689px]:text-3gitxl font-extrabold uppercase'> <p>More</p> <p>coming</p> <p>soon.</p></div>
 <div className=' border rounded-lg border-gray-600 w-1/2 '>
  <video  ref={useVideo} className=' size-full rounded-lg object-cover object-center' 
  src={`videos/feature-5.mp4`} autoPlay loop ></video></div>

@@ -5,6 +5,7 @@ import About from './About'
 import Galerie from './Galerie'
 import Contact from './Contact'
 import Navbar from './Navbar'
+import './App.css'
 
 
 function App() {

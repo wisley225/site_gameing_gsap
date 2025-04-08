@@ -4,6 +4,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useState,useEffect, useRef } from 'react';
 import SplitType from 'split-type';
+import ButtonAnim from './ButtonAnim';
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,7 +13,7 @@ const Multiversal = () => {
 
  const useAnimeRef=useRef(null)
  const textref=useRef([])
- const splitUseRef=useRef(null)
+
 
 
 
@@ -109,88 +111,6 @@ return ()=>ctx.revert()
 
 
 
-const handleTextEnter =()=>{
-
-    if (splitUseRef.current) {
- console.log(splitUseRef.current)
-        const splitText=new SplitType( splitUseRef.current, {type: "chars"});
-
-
-        let ctx=gsap.context(()=>{
-
-
-   gsap.set(splitUseRef.current,{
-    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
-    lineHeight:2,
-   
-
-   })
-
-gsap.set(splitText.chars,{
-y:0,
-opacity:1
-
-})
-
- gsap.from(
-            splitText.chars,{
-                y:15,
-                stagger:0.01,
-                 duration:0.2,
-                 opacity:0
-                
-                
-                })
-        
-        })
-        
-        return ()=>ctx.revert();
-
-
-
-
-    
-    }
-
-
-
-
-  
-
-
-
-
-}
-
-const handleTextLeave =()=>{
-
-    if (splitUseRef.current) {
-const splitText=new SplitType( splitUseRef.current, {type: "chars"});
- let ctx=gsap.context(()=>{
-
-
-gsap.set(splitText.chars,{
-
-opacity:1
-
-})
-
- gsap.from(
-            splitText.chars,{
-                y:-15,
-                stagger:0.01,
-                 duration:0.2,
-                 opacity:0
-                
-                
-                })
-        
-        })
-        
-        return ()=>ctx.revert();
- }
-
-}
 
     return (
         <div className=' mt-60'>
@@ -217,14 +137,7 @@ opacity:1
          </p>
 
          
-         <button ref={ splitUseRef} 
-          onMouseEnter={()=>handleTextEnter() } 
-          onMouseLeave={()=>handleTextLeave()}
-
-
-         className='border cursor-pointer  text-black  bg-white  text-[10px]  py-2 px-6  rounded-full uppercase  '> 
-         discover prologue
- </button>
+  <ButtonAnim text='discover prologue'  containerClass= ' cursor-pointer  text-black  bg-white  text-[10px]  py-2 px-6  rounded-full uppercase  ' />
          
        </div>
       

@@ -7,6 +7,7 @@ import { FaMusic } from 'react-icons/fa';
 import { useRef ,useEffect,useState} from 'react';
 import gsap from 'gsap';
 import './navbar.css';
+import ButtonAnim from './ButtonAnim';
 
 
 
@@ -36,8 +37,7 @@ if (audioRef.current) {
         <div  className='  backdrop-brightness-50 rounded-xl fixed left-24 mt-10 z-50 w-10/12   h-20  flex justify-between   text-blue-50' >
            <div className=' flex  items-center w-1/2'>
             <div className=' size-10  mx-9'> <img src={`img/logo.png`} alt="" className=' object-center object-cover size-full' /></div>
-            
-            <button className=' flex bg-white justify-center items-center rounded-full text-black py-2 px-8'> products <TiLocationArrow className='ml-2' /> </button>
+            <ButtonAnim text='products' containerClass=' bg-white  flex justify-center items-center px-4 py-1  rounded-full  text-black ' icon={<TiLocationArrow  />} />
            </div>
 
      <ul  className=' flex w-4/12 justify-evenly  items-center text-sm '>

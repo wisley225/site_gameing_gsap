@@ -4,6 +4,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { TiLocationArrow } from 'react-icons/ti';
 import Button from './Button';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
@@ -106,14 +107,14 @@ const Hero = () => {
             muted
             id="next-video"
             ref={currentVideoRef}
-            className="absolute z-20 size-full object-cover object-center"
+            className="absolute overflow-hidden z-20 size-full object-cover object-center"
           />
 
           {/* Zone de clic */}
-          <div className=" size-full absolute z-50 flex items-center justify-center">
+          <div className=" size-full  absolute z-50 flex items-center justify-center">
             <div
               onClick={handleClick}
-              className={`absolute z-50 size-52 origin-center transition-all cursor-pointer overflow-hidden rounded-lg ${
+              className={`absolute z-50 size-52 max-md:size-32 origin-center transition-all cursor-pointer overflow-hidden rounded-lg ${
                 videoReady && `opacity-0 hover:opacity-100 hover:scale-100`
               }`}
             >
@@ -129,19 +130,19 @@ const Hero = () => {
           </div>
         </div>
 
-        <h1 className="special-font hero-heading bottom-5 right-5 text-blue-75 text-8xl font-robert-regular absolute z-40">
+        <h1 className="special-font max-md:text-5xl hero-heading bottom-5 right-5 text-blue-75 text-8xl font-robert-regular absolute z-40">
           G<b>A</b>MING
         </h1>
 
         <div className="absolute left-0 top-0 z-30 inline-block">
           <div className="mt-24 px-5 sm:px-10">
-            <h1 className="text-blue-100 text-9xl font-extrabold">
+            <h1 className="text-blue-100 text-9xl max-md:text-5xl  font-extrabold ">
               redifi<b>n</b>e
             </h1>
             <p className="text-blue-100 max-w-64">
               Enter the Metagame Layer <br /> Unleash the Play Economy
             </p>
-            <Button id="watch-triller" title="watch Title" leftIcon={<TiLocationArrow />} containerClass="bg-yellow-300 flex-center gap-1" />
+            <Button id="watch-triller" title="watch Title" leftIcon={<TiLocationArrow />} containerClass="bg-yellow-300 max-md:py-1 flex-center gap-1" />
           </div>
         </div>
       </div>

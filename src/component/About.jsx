@@ -79,7 +79,7 @@ useEffect(()=>{
 
 
         <div   className='   h-svh  flex justify-center  ' id='clip'>
-            <div ref={aboutRef} className=' absolute z-20  px-20 mask-clip-path about-image size-full'>
+            <div ref={aboutRef} className=' absolute z-20   mask-clip-path about-image size-full'>
     <img ref={imgRef} src="img/about.webp" alt="arriere-plan" className='   size-full object-cover object-center rounded-lg ' />
             </div>
 
