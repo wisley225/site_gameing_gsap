@@ -15,16 +15,10 @@ const Hero = () => {
  const [ hasClicked, setHasClicked]=useState(false)
  const nextVideoRef=useRef(null)
  const videoFrameRef=useRef(null)
- const [loading,setLoading]=useState(true)
-
-
-
-
 
  const videoTotal=4
  const videoSuivanteindex=(currenteIndex % videoTotal) +1
  const videoArrieplan=(index)=>`videos/hero-${index}.mp4`;
- 
  const handelClick=()=>{
  setHasClicked(true)
  setCurrenteIndex(videoSuivanteindex)
@@ -53,9 +47,8 @@ useEffect(()=>{
                ease: 'power1.inOut',
            });
        
-        }
-       
-        } , videoFrameRef);
+        }   
+ } , videoFrameRef);
        
          return ()=>ctx.revert();
 
