@@ -110,11 +110,11 @@ const Hero = () => {
           />
 
           {/* Zone de clic */}
-          <div className="size-full absolute z-50 flex items-center justify-center">
+          <div className=" size-full absolute z-50 flex items-center justify-center">
             <div
               onClick={handleClick}
-              className={`absolute z-50 size-52 origin-center transition-all cursor-pointer overflow-hidden rounded-lg ${
-                videoReady && `opacity-0 hover:opacity-100 hover:scale-100`
+              className={`absolute opacity-0 z-50 size-52 origin-center transition-all cursor-pointer overflow-hidden rounded-lg ${
+                videoReady && ` hover:opacity-100 hover:scale-100`
               }`}
             >
               <video
