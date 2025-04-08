@@ -2,16 +2,21 @@
  import gsap from 'gsap';
  import ScrollTrigger from 'gsap/ScrollTrigger';
 import { TiLocationArrow } from 'react-icons/ti';
- import Button from './Button';
+import Button from './Button';
+
+ 
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
 
+
  const [currenteIndex, setCurrenteIndex]=useState(1)
  const [ hasClicked, setHasClicked]=useState(false)
  const nextVideoRef=useRef(null)
  const videoFrameRef=useRef(null)
+ const [loading,setLoading]=useState(true)
+
  const videoTotal=4
  const videoSuivanteindex=(currenteIndex % videoTotal) +1
  const videoArrieplan=(index)=>`/videos/hero-${index}.mp4`;
@@ -22,66 +27,88 @@ const Hero = () => {
 }
 
 useEffect(()=>{
-  let ctx=gsap.context(()=>{
 
- if (hasClicked) {
-   
-    gsap.set( '#next-video', { visibility:'visible', width:"50%", height:"50%"})
-    gsap.to('#next-video',{
-     transformOrigin:'center center',
-        scale:1,
-        width:'100%',
-        height:'100%',
-        duration:0.5,
-        ease:'power1.inOut',
-        onStart:()=>nextVideoRef.current.play()
-    })
-    gsap.from('#current-video', {
-        transformOrigin: 'center center',
-        scale: 1.5,
-        duration: 1.5,
-        ease: 'power1.inOut',
-    });
 
- }
 
- } , videoFrameRef);
 
-  return ()=>ctx.revert();
+
+    let ctx=gsap.context(()=>{
+
+        if (hasClicked) {
+          
+           gsap.set( '#next-video', { visibility:'visible', width:"50%", height:"50%"})
+           gsap.to('#next-video',{
+            transformOrigin:'center center',
+               scale:1,
+               width:'100%',
+               height:'100%',
+               duration:0.5,
+               ease:'power1.inOut',
+               onStart:()=>nextVideoRef.current.play()
+           })
+           gsap.from('#current-video', {
+               transformOrigin: 'center center',
+               scale: 1.5,
+               duration: 1.5,
+               ease: 'power1.inOut',
+           });
+       
+        }
+       
+        } , videoFrameRef);
+       
+         return ()=>ctx.revert();
+
+
+     
+
+
+
+
+
+
 },[currenteIndex])
-
-
 
  useEffect(() => {
 
-     const ctx2 = gsap.context(() => {
-
-         gsap.set(videoFrameRef.current, {
-             clipPath: 'polygon(25% 0, 60% 0, 92% 95%, 0 100%)',
-             borderRadius: '0 0 40% 40%'
-         });
-
-         gsap.from(videoFrameRef.current, {
-             clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-             borderRadius: '0 0 0 0',
-             ease: 'power1.inOut',
-             duration: 1.5,
-             scrollTrigger:{
-                 trigger: videoFrameRef.current,
-                 start: '90% 50%',
-                 end: '80% center',
-                 scrub:1,
-              
-             }
-         });
-
-   });
-
-     return () => ctx2.revert();
 
 
 
- }, []);
+
+
+    if ( videoFrameRef.current) {
+
+
+        const ctx2 = gsap.context(() => {
+
+            gsap.set(videoFrameRef.current, {
+                clipPath: 'polygon(25% 0, 60% 0, 92% 95%, 0 100%)',
+                borderRadius: '0 0 40% 40%'
+            });
+   
+            gsap.from(videoFrameRef.current, {
+                clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+                borderRadius: '0 0 0 0',
+                ease: 'power1.inOut',
+                duration: 1.5,
+                scrollTrigger:{
+                    trigger: videoFrameRef.current,
+                    start: '90% 50%',
+                    end: '80% center',
+                    scrub:1,
+                 
+                }
+            });
+   
+      });
+   
+        return () => ctx2.revert();
+        
+    }
+
+
+
+}, []);
 
 
     return (

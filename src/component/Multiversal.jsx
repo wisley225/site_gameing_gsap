@@ -188,20 +188,7 @@ opacity:1
         })
         
         return ()=>ctx.revert();
-
-
-
-
-    
-    }
-
-
-
-
-  
-
-
-
+ }
 
 }
 
@@ -210,9 +197,7 @@ opacity:1
         <h1 className=' mb-5 uppercase text-white text-sm text-center'> the Multiversal ip world</h1>    
         <p ref={(el)=>(textref.current[0]=el)} className=' uppercase font-extrabold text-7xl text-white text-center'>the story of </p>
         <p ref={(el)=>(textref.current[1]=el)} className='   bg-clip-text mix-blend-difference relative z-10   uppercase font-extrabold text-7xl text-white text-center'>a hidden realm </p>
-     
-     
-     
+    
        <div 
        onMouseMove={handleMouseMove}
        onMouseLeave={handleMouseLeave} 
