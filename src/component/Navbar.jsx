@@ -32,14 +32,16 @@ if (audioRef.current) {
 
 
     return (
-        <div  className='max-[563px]:left-1  max-[1015px]:w-7/12 max-[995px]:w-[550px] max-[689px]:w-[400px] max-[689px]:left-36  backdrop-brightness-50 rounded-xl fixed left-24 mt-10 z-50 w-10/12   py-5 max-[717px]:flex-col   max-[717px]:items-center  flex justify-between   text-blue-50' >
-           <div className='   flex justify-center max-[689px]:w-full  items-center w-1/2'>
-            <div className=' size-10   mx-9  '> 
-                <img src={`img/logo.png`} alt="" className=' object-center object-cover size-full' /></div>
+    
+        <div  className='   px-10 w-full  max-[1050px]:px-5  max-[1050px]:justify-evenly      backdrop-brightness-50 rounded-xl fixed   mt-10 z-50  py-5 max-[717px]:flex-col   max-[717px]:items-center  flex justify-between   text-blue-50' >
+           <div className='  max-[717px]:mb-5   flex  max-[689px]:w-full  items-center  w-44 justify-between'>
+            <div className=' size-10    '> 
+                <img src={`img/logo.png`} alt="" className=' object-center object-cover size-full ' />
+                </div>
             <ButtonAnim text='products' containerClass=' bg-white  flex justify-center items-center px-4 py-1 max-[1015px]:w-40 rounded-full  text-black  ' icon={<TiLocationArrow  />} />
            </div>
 
-     <ul  className='  flex  justify-evenly  items-center text-sm '>
+            <ul  className='  flex  justify-between  items-center text-sm    '>
            
             <li 
                  className='menu   cursor-pointer '>nexus  </li>
